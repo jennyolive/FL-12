@@ -15,32 +15,17 @@
     text-shadow: 5px 5px 3px rgba(51, 51, 51);
 }
 
-@-webkit-keyframes slide-left {
-    0% {
-        -webkit-transform: translateX(200px);
-        transform: translateX(200px);
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-
 @keyframes slide-left {
     0% {
-        -webkit-transform: translateX(200px);
         transform: translateX(200px);
     }
 
     100% {
-        -webkit-transform: translateX(0);
         transform: translateX(0);
     }
 }
 
 .tm-banner-text {
-    -webkit-animation: slide-left 2s linear forwards;
     animation: slide-left 2s linear forwards;
 }
 
@@ -107,8 +92,7 @@ font-style: italic;
 .tm-content-box > .gallery-container{
     border: 1px solid lightgray;
 }
-.blocks > .tm-content-box > .gallery-container >li:nth-child(odd){
-    border: 10px solid lightskyblue;
+.blocks > .tm-content-box > .gallery-container >li:nth-child(odd){  
     background-color: lightskyblue;
     color:white;
 }
@@ -134,7 +118,7 @@ input[type=email] {
 }
 #contact_message{
     border: 1px solid lightskyblue;
-    background: right 1% bottom 10% no-repeat url(../img/email-icon.png);  
+    background: right 1% bottom 6% no-repeat url(../img/email-icon.png);  
     background-size: 3%;
 }
 #contact_name:focus{
