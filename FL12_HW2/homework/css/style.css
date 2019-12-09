@@ -44,7 +44,7 @@
 
 .flex-2-col > .tm-team-description-container{
     width:40%;
-    line-height: 1.8rem;
+    line-height: 2rem;
 }
 .flex-2-col > .tm-team-description-container > .tm-section-title{
     text-align: center;
@@ -58,4 +58,25 @@
 }
 .tm-box-bg-title:hover{
     font-style: italic;
+}
+.padding-medium > h2{
+    color:lightskyblue;
+    text-align: center;
+}
+.padding-medium > ol > li{
+    list-style-type: lower-alpha;
+}
+.padding-medium > ol > li:nth-child(1)::after, .padding-medium > ol > li:nth-child(3)::after{
+    content:"New";
+    color:red;
+    font-weight: bold;
+    margin-left: 0.3rem;
+    font-variant: small-caps;
+    font-size: 0.7rem;
+    vertical-align: top;
+}
+.padding-medium > ol > li:hover::before{
+    content:">";
+    color:black;
+    font-weight: bold;
 }
