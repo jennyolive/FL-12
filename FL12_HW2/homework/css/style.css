@@ -36,3 +36,23 @@
     -webkit-animation: slide-left 2s linear forwards;
     animation: slide-left 2s linear forwards;
 }
+.tm-content-box.flex-2-col{
+    display: flex;
+}
+.tm-team-description-container{
+    width:40%;
+    line-height: 1.8rem;
+}
+.tm-team-description-container > .tm-section-title{
+    text-align: center;
+}
+.tm-team-description-container > .tm-section-description{
+    text-indent: 1.5rem; 
+    text-align: justify;
+}
+.box.box-bg:hover{
+    background-color: lightgrey;
+}
+.tm-box-bg-title:hover{
+    font-style: italic;
+}
