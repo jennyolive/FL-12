@@ -126,3 +126,30 @@ font-style: italic;
     line-height: 30px;
     text-indent: 25px;
 }
+input[type=text] {
+    border: 1px solid lightskyblue;
+}
+input[type=email] {
+    border: 1px solid lightskyblue;
+}
+#contact_message{
+    border: 1px solid lightskyblue;
+    background: right 1% bottom 10% no-repeat url(../img/email-icon.png);  
+    background-size: 3%;
+}
+#contact_name:focus{
+    background-color:lightskyblue;
+} 
+#contact_email:focus{
+    background-color:lightskyblue;
+} 
+#contact_subject:focus {
+    background-color:lightskyblue;
+  }
+.submit-btn{
+      background-color: white;
+      border:1px solid lightskyblue;
+      color:lightskyblue;
+      display: block;
+      margin-left: auto;
+  }
