@@ -1,1 +1,69 @@
 // Write your styles here
+html {
+    font-size: 1rem;
+}
+
+body {
+    width: 1920px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    background: $background;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: block;
+    /*padding-bottom: 28rem;*/
+    border-bottom-right-radius: 40%;
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40%;
+        margin-left: 10%;
+    }
+    &_heading{
+        margin-top: 2rem;
+        margin-bottom: 0;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 5rem;
+        font-weight: bold;
+        line-height: 5rem;
+        letter-spacing: -4px;
+    }
+    &_text {
+        font-family: 'Hind', sans-serif;
+        margin-top: 3.5rem;
+        width:80%;
+    }
+}
+
+.landing-logo {
+    display: flex;
+
+    & img {
+        align-self: center;
+    }
+
+    & p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding-left: 0.8rem;
+        line-height: 1.4rem;
+        & span{
+            font-weight: lighter;
+            font-size: 0.7rem;
+        }
+    }
+}
