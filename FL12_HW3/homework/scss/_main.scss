@@ -1,51 +1,4 @@
-// Write your styles here
-html {
-    font-size: 1rem;
-}
-
-body {
-    width: 1920px;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-.header {
-    background: $background;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    display: block;
-    /*padding-bottom: 28rem;*/
-    border-bottom-right-radius: 40%;
-
-    &-wrap {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 40%;
-        margin-left: 10%;
-    }
-    &_heading{
-        margin-top: 2rem;
-        margin-bottom: 0;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 5rem;
-        font-weight: bold;
-        line-height: 5rem;
-        letter-spacing: -4px;
-    }
-    &_text {
-        font-family: 'Hind', sans-serif;
-        margin-top: 3.5rem;
-        width:80%;
-    }
-}
-
-.landing-logo {
+.logo {
     display: flex;
 
     & img {
@@ -56,14 +9,105 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: $mainFont;
         font-weight: bold;
         font-size: 1.5rem;
         padding-left: 0.8rem;
-        line-height: 1.4rem;
+        line-height: 1;
         & span{
             font-weight: lighter;
             font-size: 0.7rem;
         }
     }
+}
+/*MIXIN*/
+@mixin button {
+    padding:0.8rem 2.7rem;
+    background-color: $buttonColor;
+    color:white;
+    font-family: $mainFont;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  @mixin link{
+      color:white;
+      font-family: $mainFont;
+      font-size: 1.3rem;     
+  } 
+  @mixin markedtext($width, $height){
+          content:'';
+          background-color: $markedcolor;
+          width:$width;
+          height:$height;
+          position: absolute;
+          z-index:-1;
+  }
+      
+html {
+    font-size: 1rem;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background: $background;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding-bottom: 10.5rem;
+    border-bottom-right-radius: 38%;
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40%;
+        padding-top: 1.4rem;
+        margin-left: 10%;
+    }
+    &_heading{
+        margin-top: 4.2rem;
+        font-family: $mainFont;
+        font-size: 4.5rem;
+        font-weight: bold;
+        line-height: 1;
+        letter-spacing: 0.5px;
+        position: relative;
+        z-index: 10;
+      
+        &::before{
+            @include markedtext(310px, 55px);
+            bottom:0;
+        }
+    }
+    &_text {
+        font-family: $secondaryFont;
+        margin-top: 4rem;
+        letter-spacing: 0.6px;
+        font-size: 1rem;
+        line-height: 1.5;
+        width:80%;
+    }
+    &_button{
+        @include button;
+        margin-top:8%;
+    }
+    a{
+        @include link;
+        margin-left: 9rem;
+    }
+}
+
+.landing-logo {
+   @extend .logo;
 }

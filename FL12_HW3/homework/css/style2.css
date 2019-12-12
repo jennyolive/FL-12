@@ -1,12 +1,28 @@
+.logo, .landing-logo {
+  display: flex; }
+  .logo img, .landing-logo img {
+    align-self: center; }
+  .logo p, .landing-logo p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-left: 0.8rem;
+    line-height: 1; }
+    .logo p span, .landing-logo p span {
+      font-weight: lighter;
+      font-size: 0.7rem; }
+
+/*MIXIN*/
 html {
   font-size: 1rem; }
 
-body {
-  width: 1920px;
+* {
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
-  overflow-x: hidden; }
+  margin: 0; }
 
 .header {
   background: url(../img/m-h-night.jpg);
@@ -16,42 +32,54 @@ body {
   height: 100%;
   width: 100%;
   display: block;
-  /*padding-bottom: 28rem;*/
-  border-bottom-right-radius: 40%; }
+  padding-bottom: 10.5rem;
+  border-bottom-right-radius: 38%; }
   .header-wrap {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 40%;
+    padding-top: 1.4rem;
     margin-left: 10%; }
   .header_heading {
-    margin-top: 2rem;
-    margin-bottom: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 5rem;
+    margin-top: 4.2rem;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 4.5rem;
     font-weight: bold;
-    line-height: 5rem;
-    letter-spacing: -4px; }
+    line-height: 1;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 10; }
+    .header_heading::before {
+      content: '';
+      background-color: red;
+      width: 310px;
+      height: 55px;
+      position: absolute;
+      z-index: -1;
+      bottom: 0; }
   .header_text {
-    font-family: 'Hind', sans-serif;
-    margin-top: 3.5rem;
+    font-family: "Hind", sans-serif;
+    margin-top: 4rem;
+    letter-spacing: 0.6px;
+    font-size: 1rem;
+    line-height: 1.5;
     width: 80%; }
-
-.landing-logo {
-  display: flex; }
-  .landing-logo img {
-    align-self: center; }
-  .landing-logo p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding-left: 0.8rem;
-    line-height: 1.4rem; }
-    .landing-logo p span {
-      font-weight: lighter;
-      font-size: 0.7rem; }
+  .header_button {
+    padding: 0.8rem 2.7rem;
+    background-color: #699900;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8%; }
+  .header a {
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.3rem;
+    margin-left: 9rem; }
 
 /*# sourceMappingURL=style2.css.map */
