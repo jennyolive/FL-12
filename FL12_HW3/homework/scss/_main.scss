@@ -110,6 +110,7 @@ body{
         letter-spacing: 0.5px;
         position: relative;
         z-index: 10;
+        color:$headertextColor;
 
         &::before {
             @include markedtext(310px, 55px);
@@ -121,6 +122,7 @@ body{
         @include text;
         margin-top: 4rem;
         width: 80%;
+        color:$headertextColor;
     }
 
     &_button {
@@ -137,9 +139,9 @@ body{
 .landing-logo {
     @extend .logo;
    p{
-       color:black;
+       color:$logoColor;
        span{
-           color:black;
+           color:$logoColor;
        }
    }
     
@@ -160,16 +162,17 @@ body{
 
     &_text {
         text-align: center;
-        padding: 2.5rem;
-        font-weight: $secondaryFont;
+        font-family: $mainFont;
         font-size: 45px;
-        letter-spacing: 0.5px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         position: relative;
+        color:$sectiontextColor;
 
         &::after {
-            @include markedtext(190px, 40px);
-            right: 750px;
-            top: 48px;
+            @include markedtext(200px, 45px);
+            right: 745px;
+            top: 40px;
         }
     }
 
@@ -229,6 +232,7 @@ body{
             font-weight: bold;
             font-size: 30px;
             position: relative;
+            color:$bannertitleColor;
             &::before {
                 @include markedtext(70px, 40px);
                 right:220px;

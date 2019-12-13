@@ -51,7 +51,8 @@ body {
     line-height: 1;
     letter-spacing: 0.5px;
     position: relative;
-    z-index: 10; }
+    z-index: 10;
+    color: white; }
     .header_heading::before {
       content: '';
       background-color: #FF4E33;
@@ -66,7 +67,8 @@ body {
     font-size: 16px;
     line-height: 1.5;
     margin-top: 4rem;
-    width: 80%; }
+    width: 80%;
+    color: white; }
   .header_button {
     padding: 0.8rem 2.7rem;
     background-color: #E3AC00;
@@ -89,9 +91,9 @@ body {
       color: #b3b3b3; }
 
 .landing-logo p {
-  color: black; }
+  color: white; }
   .landing-logo p span {
-    color: black; }
+    color: white; }
 
 .section {
   display: flex;
@@ -108,20 +110,21 @@ body {
       color: #b3b3b3; }
   .section_text {
     text-align: center;
-    padding: 2.5rem;
-    font-weight: "Hind", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 45px;
-    letter-spacing: 0.5px;
-    position: relative; }
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+    color: white; }
     .section_text::after {
       content: '';
       background-color: #FF4E33;
-      width: 190px;
-      height: 40px;
+      width: 200px;
+      height: 45px;
       position: absolute;
       z-index: -1;
-      right: 750px;
-      top: 48px; }
+      right: 745px;
+      top: 40px; }
   .section_card {
     background-color: #3B3F50;
     display: flex;
@@ -169,7 +172,8 @@ body {
       font-family: "Source Sans Pro", sans-serif;
       font-weight: bold;
       font-size: 30px;
-      position: relative; }
+      position: relative;
+      color: white; }
       .section_banner_heading::before {
         content: '';
         background-color: #FF4E33;
