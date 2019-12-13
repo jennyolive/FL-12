@@ -14,12 +14,16 @@
         font-size: 26px;
         padding-left: 0.8rem;
         line-height: 1;
+
         span {
             font-weight: lighter;
             font-size: 12px;
         }
     }
 }
+
+//maps
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
 
 //MIXIN
 @mixin button {
@@ -30,9 +34,10 @@
     font-size: 18px;
     border: none;
     border-radius: 3px;
-    font-weight: 600;
+    font-weight: map-get($font-weights, "bold");
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background-color: darken($color: $buttonColor, $amount: 10);
     }
 }
@@ -40,9 +45,11 @@
 @mixin link {
     color: white;
     font-family: $mainFont;
+    font-weight: map-get($font-weights, "medium");
     font-size: 20px;
-    &:hover{
-        color:darken($color: white, $amount: 30);
+
+    &:hover {
+        color: darken($color: white, $amount: 30);
     }
 }
 
@@ -77,7 +84,8 @@ html {
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     background-color: $mainBg;
 }
 
@@ -105,12 +113,12 @@ body{
         margin-top: 4.2rem;
         font-family: $mainFont;
         font-size: 72px;
-        font-weight: bold;
+        font-weight: map-get($font-weights, "bold");
         line-height: 1;
         letter-spacing: 0.5px;
         position: relative;
         z-index: 10;
-        color:$headertextColor;
+        color: $headertextColor;
 
         &::before {
             @include markedtext(310px, 55px);
@@ -122,7 +130,7 @@ body{
         @include text;
         margin-top: 4rem;
         width: 80%;
-        color:$headertextColor;
+        color: $headertextColor;
     }
 
     &_button {
@@ -138,13 +146,15 @@ body{
 
 .landing-logo {
     @extend .logo;
-   p{
-       color:$logoColor;
-       span{
-           color:$logoColor;
-       }
-   }
-    
+
+    p {
+        color: $logoColor;
+
+        span {
+            color: $logoColor;
+        }
+    }
+
 }
 
 .section {
@@ -154,24 +164,25 @@ body{
     &_card_wrap {
         margin: 0 auto;
         width: 60%;
-        margin-bottom: 4rem;
     }
-    &_link{
+
+    &_link {
         @include link;
     }
 
     &_text {
         text-align: center;
         font-family: $mainFont;
+        font-weight: map-get($font-weights, "bold");
         font-size: 45px;
         padding-top: 2rem;
         padding-bottom: 2rem;
         position: relative;
-        color:$sectiontextColor;
+        color: $sectiontextColor;
 
         &::after {
-            @include markedtext(200px, 45px);
-            right: 745px;
+            @include markedtext(210px, 45px);
+            right: 735px;
             top: 40px;
         }
     }
@@ -210,7 +221,7 @@ body{
     }
 
     &_banner {
-        margin: 0 auto;
+        margin-top: 5rem;
         background: $gradientBg;
         width: 64%;
         border-radius: 5px;
@@ -222,6 +233,7 @@ body{
         position: relative;
         z-index: 1;
         bottom: -4rem;
+        left: 18%;
 
         &_text_wrap {
             line-height: 2;
@@ -229,13 +241,14 @@ body{
 
         &_heading {
             font-family: $mainFont;
-            font-weight: bold;
+            font-weight: map-get($font-weights, "bold");
             font-size: 30px;
             position: relative;
-            color:$bannertitleColor;
+            color: $bannertitleColor;
+
             &::before {
-                @include markedtext(70px, 40px);
-                right:220px;
+                @include markedtext(70px, 35px);
+                right: 220px;
                 bottom: 10px;
             }
         }
@@ -257,18 +270,20 @@ body{
     padding: 5rem;
 
     &_logo {
-        @extend .logo;  
+        @extend .logo;
+
         p {
             padding-top: 1rem;
-            color:white;
-            span{
-                color:white;
+            color: white;
+
+            span {
+                color: white;
             }
-        }  
+        }
     }
 
     &_text {
-        width:20%;
+        width: 20%;
         font-family: $secondaryFont;
     }
 
@@ -278,10 +293,9 @@ body{
         margin: 0 auto;
         padding-top: 3rem;
         width: 87%;
-        color:white;
-      
-        
-        .footer-cr{
+        color: white;
+
+        .footer-cr {
             font-family: $secondaryFont;
             padding-top: 1rem;
         }
