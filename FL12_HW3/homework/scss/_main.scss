@@ -11,22 +11,22 @@
         align-items: center;
         font-family: $mainFont;
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 26px;
         padding-left: 0.8rem;
         line-height: 1;
         & span{
             font-weight: lighter;
-            font-size: 0.7rem;
+            font-size: 12px;
         }
     }
 }
-/*MIXIN*/
+//MIXIN
 @mixin button {
     padding:0.8rem 2.7rem;
     background-color: $buttonColor;
     color:white;
     font-family: $mainFont;
-    font-size: 1.2rem;
+    font-size: 18px;
     border: none;
     border-radius: 3px;
     font-weight: 600;
@@ -35,15 +35,21 @@
   @mixin link{
       color:white;
       font-family: $mainFont;
-      font-size: 1.3rem;     
+      font-size: 20px;     
   } 
   @mixin markedtext($width, $height){
           content:'';
-          background-color: $markedcolor;
+          background-color: $markedColor;
           width:$width;
           height:$height;
           position: absolute;
           z-index:-1;
+  }
+  @mixin text{
+    font-family: $secondaryFont;
+    letter-spacing: 0.6px;
+    font-size: 16px;
+    line-height: 1.5;
   }
       
 html {
@@ -78,7 +84,7 @@ html {
     &_heading{
         margin-top: 4.2rem;
         font-family: $mainFont;
-        font-size: 4.5rem;
+        font-size:72px;
         font-weight: bold;
         line-height: 1;
         letter-spacing: 0.5px;
@@ -91,11 +97,8 @@ html {
         }
     }
     &_text {
-        font-family: $secondaryFont;
+        @include text;
         margin-top: 4rem;
-        letter-spacing: 0.6px;
-        font-size: 1rem;
-        line-height: 1.5;
         width:80%;
     }
     &_button{
