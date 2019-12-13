@@ -1,11 +1,11 @@
 .logo {
     display: flex;
 
-    & img {
+    img {
         align-self: center;
     }
 
-    & p {
+    p {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -14,8 +14,7 @@
         font-size: 26px;
         padding-left: 0.8rem;
         line-height: 1;
-
-        & span {
+        span {
             font-weight: lighter;
             font-size: 12px;
         }
@@ -33,12 +32,18 @@
     border-radius: 3px;
     font-weight: 600;
     cursor: pointer;
+    &:hover{
+        background-color: darken($color: $buttonColor, $amount: 10);
+    }
 }
 
 @mixin link {
     color: white;
     font-family: $mainFont;
     font-size: 20px;
+    &:hover{
+        color:darken($color: white, $amount: 30);
+    }
 }
 
 @mixin markedtext($width, $height) {
@@ -56,8 +61,9 @@
     font-size: 16px;
     line-height: 1.5;
 }
-@mixin cardTitle{
-    font-family:$mainFont;
+
+@mixin cardTitle {
+    font-family: $mainFont;
     font-size: 25px;
     font-weight: bold;
 }
@@ -70,6 +76,9 @@ html {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+body{
+    background-color: $mainBg;
 }
 
 .header {
@@ -127,6 +136,13 @@ html {
 
 .landing-logo {
     @extend .logo;
+   p{
+       color:black;
+       span{
+           color:black;
+       }
+   }
+    
 }
 
 .section {
@@ -135,85 +151,135 @@ html {
 
     &_card_wrap {
         margin: 0 auto;
-        width:60%;
+        width: 60%;
         margin-bottom: 4rem;
     }
-    &_text{
+    &_link{
+        @include link;
+    }
+
+    &_text {
         text-align: center;
-        padding:2.5rem;
-        font-weight: $mainFont;
+        padding: 2.5rem;
+        font-weight: $secondaryFont;
         font-size: 45px;
         letter-spacing: 0.5px;
         position: relative;
-        &::after{
-            @include markedtext(190px,40px);
-            right:750px;
-            top:48px;
+
+        &::after {
+            @include markedtext(190px, 40px);
+            right: 750px;
+            top: 48px;
         }
     }
 
     &_card {
-        background-color: red;
-        display: flex;   
-        padding-left:1rem;
-        padding-top:1rem;
-        padding-bottom:1rem;
-        margin-bottom:1rem;
+        background-color: $blocksColor;
+        display: flex;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
         border-radius: 5px;
-        &_img{
-            width:40%;
+
+        &_img {
+            width: 40%;
         }
-        &_right_container{
-            width:60%;
-            display:flex;
+
+        &_right_container {
+            width: 60%;
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
         }
-        &_heading{
+
+        &_heading {
             @include cardTitle;
-            color:white;
+            color: white;
         }
-        &_text{
+
+        &_text {
             @include text;
-            color:white; 
-            width:70%;
+            color: white;
+            width: 70%;
         }
     }
-    &_banner{
-        margin:0 auto;
-        background-color: green;
-        width:64%;
+
+    &_banner {
+        margin: 0 auto;
+        background: $gradientBg;
+        width: 64%;
         border-radius: 5px;
-        display:flex;
+        display: flex;
         align-items: center;
         justify-content: space-around;
-        padding-top:1rem;
-        padding-bottom:2rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
         position: relative;
         z-index: 1;
-        bottom:-4rem;
-        &_text_wrap{
+        bottom: -4rem;
+
+        &_text_wrap {
             line-height: 2;
         }
-        &_heading{
-        font-family: $mainFont;
-        font-weight: bold;
-        font-size: 30px;  
-        position: relative;
-        }
-        &_text{
+
+        &_heading {
             font-family: $mainFont;
-            color:white;
+            font-weight: bold;
+            font-size: 30px;
+            position: relative;
+            &::before {
+                @include markedtext(70px, 40px);
+                right:220px;
+                bottom: 10px;
+            }
         }
-        &_button{
+
+        &_text {
+            font-family: $secondaryFont;
+            color: white;
+        }
+
+        &_button {
             @include button;
         }
-    }   
+    }
 }
-footer{
-    background-color: grey;
+
+.footer {
+    background-color: $blocksColor;
     position: relative;
-    padding:5rem;
-    
+    padding: 5rem;
+
+    &_logo {
+        @extend .logo;  
+        p {
+            padding-top: 1rem;
+            color:white;
+            span{
+                color:white;
+            }
+        }  
+    }
+
+    &_text {
+        width:20%;
+        font-family: $secondaryFont;
+    }
+
+    .footer-wrap {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-top: 3rem;
+        width: 87%;
+        color:white;
+      
+        
+        .footer-cr{
+            font-family: $secondaryFont;
+            padding-top: 1rem;
+        }
+    }
 }

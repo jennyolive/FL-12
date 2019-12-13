@@ -1,8 +1,8 @@
-.logo, .landing-logo {
+.logo, .landing-logo, .footer_logo {
   display: flex; }
-  .logo img, .landing-logo img {
+  .logo img, .landing-logo img, .footer_logo img {
     align-self: center; }
-  .logo p, .landing-logo p {
+  .logo p, .landing-logo p, .footer_logo p {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +11,7 @@
     font-size: 26px;
     padding-left: 0.8rem;
     line-height: 1; }
-    .logo p span, .landing-logo p span {
+    .logo p span, .landing-logo p span, .footer_logo p span {
       font-weight: lighter;
       font-size: 12px; }
 
@@ -22,6 +22,9 @@ html {
   box-sizing: border-box;
   padding: 0;
   margin: 0; }
+
+body {
+  background-color: #21232E; }
 
 .header {
   background: url(../img/m-h-night.jpg);
@@ -51,7 +54,7 @@ html {
     z-index: 10; }
     .header_heading::before {
       content: '';
-      background-color: red;
+      background-color: #FF4E33;
       width: 310px;
       height: 55px;
       position: absolute;
@@ -66,7 +69,7 @@ html {
     width: 80%; }
   .header_button {
     padding: 0.8rem 2.7rem;
-    background-color: #699900;
+    background-color: #E3AC00;
     color: white;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 18px;
@@ -75,11 +78,20 @@ html {
     font-weight: 600;
     cursor: pointer;
     margin-top: 8%; }
+    .header_button:hover {
+      background-color: #b08500; }
   .header a {
     color: white;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 20px;
     margin-left: 9rem; }
+    .header a:hover {
+      color: #b3b3b3; }
+
+.landing-logo p {
+  color: black; }
+  .landing-logo p span {
+    color: black; }
 
 .section {
   display: flex;
@@ -88,16 +100,22 @@ html {
     margin: 0 auto;
     width: 60%;
     margin-bottom: 4rem; }
+  .section_link {
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px; }
+    .section_link:hover {
+      color: #b3b3b3; }
   .section_text {
     text-align: center;
     padding: 2.5rem;
-    font-weight: "Source Sans Pro", sans-serif;
+    font-weight: "Hind", sans-serif;
     font-size: 45px;
     letter-spacing: 0.5px;
     position: relative; }
     .section_text::after {
       content: '';
-      background-color: red;
+      background-color: #FF4E33;
       width: 190px;
       height: 40px;
       position: absolute;
@@ -105,7 +123,7 @@ html {
       right: 750px;
       top: 48px; }
   .section_card {
-    background-color: red;
+    background-color: #3B3F50;
     display: flex;
     padding-left: 1rem;
     padding-top: 1rem;
@@ -134,7 +152,7 @@ html {
       width: 70%; }
   .section_banner {
     margin: 0 auto;
-    background-color: green;
+    background: linear-gradient(90deg, #dca107 0%, #983569 100%);
     width: 64%;
     border-radius: 5px;
     display: flex;
@@ -152,12 +170,21 @@ html {
       font-weight: bold;
       font-size: 30px;
       position: relative; }
+      .section_banner_heading::before {
+        content: '';
+        background-color: #FF4E33;
+        width: 70px;
+        height: 40px;
+        position: absolute;
+        z-index: -1;
+        right: 220px;
+        bottom: 10px; }
     .section_banner_text {
-      font-family: "Source Sans Pro", sans-serif;
+      font-family: "Hind", sans-serif;
       color: white; }
     .section_banner_button {
       padding: 0.8rem 2.7rem;
-      background-color: #699900;
+      background-color: #E3AC00;
       color: white;
       font-family: "Source Sans Pro", sans-serif;
       font-size: 18px;
@@ -165,10 +192,30 @@ html {
       border-radius: 3px;
       font-weight: 600;
       cursor: pointer; }
+      .section_banner_button:hover {
+        background-color: #b08500; }
 
-footer {
-  background-color: grey;
+.footer {
+  background-color: #3B3F50;
   position: relative;
   padding: 5rem; }
+  .footer_logo p {
+    padding-top: 1rem;
+    color: white; }
+    .footer_logo p span {
+      color: white; }
+  .footer_text {
+    width: 20%;
+    font-family: "Hind", sans-serif; }
+  .footer .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 3rem;
+    width: 87%;
+    color: white; }
+    .footer .footer-wrap .footer-cr {
+      font-family: "Hind", sans-serif;
+      padding-top: 1rem; }
 
 /*# sourceMappingURL=style2.css.map */
