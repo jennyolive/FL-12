@@ -14,49 +14,59 @@
         font-size: 26px;
         padding-left: 0.8rem;
         line-height: 1;
-        & span{
+
+        & span {
             font-weight: lighter;
             font-size: 12px;
         }
     }
 }
+
 //MIXIN
 @mixin button {
-    padding:0.8rem 2.7rem;
+    padding: 0.8rem 2.7rem;
     background-color: $buttonColor;
-    color:white;
+    color: white;
     font-family: $mainFont;
     font-size: 18px;
     border: none;
     border-radius: 3px;
     font-weight: 600;
     cursor: pointer;
-  }
-  @mixin link{
-      color:white;
-      font-family: $mainFont;
-      font-size: 20px;     
-  } 
-  @mixin markedtext($width, $height){
-          content:'';
-          background-color: $markedColor;
-          width:$width;
-          height:$height;
-          position: absolute;
-          z-index:-1;
-  }
-  @mixin text{
+}
+
+@mixin link {
+    color: white;
+    font-family: $mainFont;
+    font-size: 20px;
+}
+
+@mixin markedtext($width, $height) {
+    content: '';
+    background-color: $markedColor;
+    width: $width;
+    height: $height;
+    position: absolute;
+    z-index: -1;
+}
+
+@mixin text {
     font-family: $secondaryFont;
     letter-spacing: 0.6px;
     font-size: 16px;
     line-height: 1.5;
-  }
-      
+}
+@mixin cardTitle{
+    font-family:$mainFont;
+    font-size: 25px;
+    font-weight: bold;
+}
+
 html {
     font-size: 1rem;
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -81,36 +91,129 @@ html {
         padding-top: 1.4rem;
         margin-left: 10%;
     }
-    &_heading{
+
+    &_heading {
         margin-top: 4.2rem;
         font-family: $mainFont;
-        font-size:72px;
+        font-size: 72px;
         font-weight: bold;
         line-height: 1;
         letter-spacing: 0.5px;
         position: relative;
         z-index: 10;
-      
-        &::before{
+
+        &::before {
             @include markedtext(310px, 55px);
-            bottom:0;
+            bottom: 0;
         }
     }
+
     &_text {
         @include text;
         margin-top: 4rem;
-        width:80%;
+        width: 80%;
     }
-    &_button{
+
+    &_button {
         @include button;
-        margin-top:8%;
+        margin-top: 8%;
     }
-    a{
+
+    a {
         @include link;
         margin-left: 9rem;
     }
 }
 
 .landing-logo {
-   @extend .logo;
+    @extend .logo;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+
+    &_card_wrap {
+        margin: 0 auto;
+        width:60%;
+        margin-bottom: 4rem;
+    }
+    &_text{
+        text-align: center;
+        padding:2.5rem;
+        font-weight: $mainFont;
+        font-size: 45px;
+        letter-spacing: 0.5px;
+        position: relative;
+        &::after{
+            @include markedtext(190px,40px);
+            right:750px;
+            top:48px;
+        }
+    }
+
+    &_card {
+        background-color: red;
+        display: flex;   
+        padding-left:1rem;
+        padding-top:1rem;
+        padding-bottom:1rem;
+        margin-bottom:1rem;
+        border-radius: 5px;
+        &_img{
+            width:40%;
+        }
+        &_right_container{
+            width:60%;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        &_heading{
+            @include cardTitle;
+            color:white;
+        }
+        &_text{
+            @include text;
+            color:white; 
+            width:70%;
+        }
+    }
+    &_banner{
+        margin:0 auto;
+        background-color: green;
+        width:64%;
+        border-radius: 5px;
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-top:1rem;
+        padding-bottom:2rem;
+        position: relative;
+        z-index: 1;
+        bottom:-4rem;
+        &_text_wrap{
+            line-height: 2;
+        }
+        &_heading{
+        font-family: $mainFont;
+        font-weight: bold;
+        font-size: 30px;  
+        position: relative;
+        }
+        &_text{
+            font-family: $mainFont;
+            color:white;
+        }
+        &_button{
+            @include button;
+        }
+    }   
+}
+footer{
+    background-color: grey;
+    position: relative;
+    padding:5rem;
+    
 }

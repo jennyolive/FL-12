@@ -81,4 +81,94 @@ html {
     font-size: 20px;
     margin-left: 9rem; }
 
+.section {
+  display: flex;
+  flex-direction: column; }
+  .section_card_wrap {
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 4rem; }
+  .section_text {
+    text-align: center;
+    padding: 2.5rem;
+    font-weight: "Source Sans Pro", sans-serif;
+    font-size: 45px;
+    letter-spacing: 0.5px;
+    position: relative; }
+    .section_text::after {
+      content: '';
+      background-color: red;
+      width: 190px;
+      height: 40px;
+      position: absolute;
+      z-index: -1;
+      right: 750px;
+      top: 48px; }
+  .section_card {
+    background-color: red;
+    display: flex;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px; }
+    .section_card_img {
+      width: 40%; }
+    .section_card_right_container {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+    .section_card_heading {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      color: white; }
+    .section_card_text {
+      font-family: "Hind", sans-serif;
+      letter-spacing: 0.6px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: white;
+      width: 70%; }
+  .section_banner {
+    margin: 0 auto;
+    background-color: green;
+    width: 64%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    bottom: -4rem; }
+    .section_banner_text_wrap {
+      line-height: 2; }
+    .section_banner_heading {
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      position: relative; }
+    .section_banner_text {
+      font-family: "Source Sans Pro", sans-serif;
+      color: white; }
+    .section_banner_button {
+      padding: 0.8rem 2.7rem;
+      background-color: #699900;
+      color: white;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
+      border: none;
+      border-radius: 3px;
+      font-weight: 600;
+      cursor: pointer; }
+
+footer {
+  background-color: grey;
+  position: relative;
+  padding: 5rem; }
+
 /*# sourceMappingURL=style2.css.map */
