@@ -63,7 +63,6 @@ $font-weights: ("regular": 400, "medium": 500, "bold": 700);
 }
 
 @mixin text {
-    font-family: $secondaryFont;
     letter-spacing: 0.6px;
     font-size: 16px;
     line-height: 1.5;
@@ -128,8 +127,9 @@ body {
 
     &_text {
         @include text;
-        margin-top: 4rem;
-        width: 80%;
+        font-family: $headerFont;
+        margin-top: 2.5rem;
+        white-space: pre-line;
         color: $headertextColor;
     }
 
@@ -215,6 +215,7 @@ body {
 
         &_text {
             @include text;
+            font-family: $secondaryFont;
             color: white;
             width: 70%;
         }

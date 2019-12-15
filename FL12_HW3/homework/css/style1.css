@@ -62,12 +62,12 @@ body {
       z-index: -1;
       bottom: 0; }
   .header_text {
-    font-family: "Hind", sans-serif;
     letter-spacing: 0.6px;
     font-size: 16px;
     line-height: 1.5;
-    margin-top: 4rem;
-    width: 80%;
+    font-family: "Hind", sans-serif;
+    margin-top: 2.5rem;
+    white-space: pre-line;
     color: #21232E; }
   .header_button {
     padding: 0.8rem 2.7rem;
@@ -149,10 +149,10 @@ body {
       font-weight: bold;
       color: white; }
     .section_card_text {
-      font-family: "Hind", sans-serif;
       letter-spacing: 0.6px;
       font-size: 16px;
       line-height: 1.5;
+      font-family: "Hind", sans-serif;
       color: white;
       width: 70%; }
   .section_banner {
@@ -224,5 +224,3 @@ body {
     .footer .footer-wrap .footer-cr {
       font-family: "Hind", sans-serif;
       padding-top: 1rem; }
-
-/*# sourceMappingURL=style1.css.map */
