@@ -15,12 +15,48 @@ header {
     background: url('../img/home-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top 1rem center;
     height: 100%;
     width: 100%;
 }
+.menu-wrap {
+    position: fixed; 
+    width: 100%; 
+    height: 4rem;
+    background-color: white;
+    z-index: 2; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:15%;
+    padding-right:15%;
+}
+.menu > ul > li {
+    display: inline-block;
+    margin-right: 2rem;
+}
+.menu > ul > li:last-child {
+    margin-right:0;
+}
+.menu > ul > li > a{
+    text-decoration: none;
+    color:grey;
+}
+.menu > ul > li > a:hover{
+    color:goldenrod;
+    cursor: pointer;
+}
 
-main {
+.logo-link {
+    text-decoration: none;
+    color:grey;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.logo-link:hover{
+    color:goldenrod;
+}
+.container {
     max-width: 900px;
     margin: 0 auto;
 }
@@ -71,7 +107,7 @@ main {
 
 .section_card_button {
     padding: 1rem 2rem;
-    border-radius: 10rem;
+    border-radius: 50px;
     border: 2px solid lightgray;
     background-color: white;
     color: grey;
@@ -81,7 +117,7 @@ main {
 
 .section_card_button:hover {
     cursor: pointer;
-    background-color: lightgray;
+    border: 2px solid goldenrod;
 }
 
 hr {
