@@ -12,49 +12,85 @@ body {
 }
 
 header {
-    background: url('../img/home-bg.jpg');
+    background: radial-gradient(circle, rgba(17,31,31,1) 0%, rgba(0,0,0,0.577468487394958) 50%), url('../img/home-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top 1rem center;
     height: 100%;
     width: 100%;
 }
+
 .menu-wrap {
-    position: fixed; 
-    width: 100%; 
+    position: fixed;
+    width: 100%;
     height: 4rem;
     background-color: white;
-    z-index: 2; 
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left:15%;
-    padding-right:15%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
-.menu > ul > li {
+
+.menu>ul>li {
     display: inline-block;
     margin-right: 2rem;
 }
-.menu > ul > li:last-child {
-    margin-right:0;
+
+.menu>ul>li:last-child {
+    margin-right: 0;
 }
-.menu > ul > li > a{
+
+.menu>ul>li>a {
     text-decoration: none;
-    color:grey;
+    color: grey;
 }
-.menu > ul > li > a:hover{
-    color:goldenrod;
+
+.menu>ul>li>a:hover {
+    color: goldenrod;
     cursor: pointer;
 }
 
 .logo-link {
     text-decoration: none;
-    color:grey;
+    color: grey;
     text-transform: uppercase;
     font-weight: bold;
 }
-.logo-link:hover{
+
+.logo-link:hover {
+    color: goldenrod;
+}
+
+.header-info {
+    position: absolute;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+h1{
+    font-size: 4rem;
+    color:white;
+}
+.header-text{
     color:goldenrod;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.header_button{
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: 2px solid lightgray;
+    background-color: white;
+    color: grey;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline:none;
 }
 .container {
     max-width: 900px;
@@ -63,8 +99,8 @@ header {
 
 .section_card_wrap {
     margin-top: 6rem;
-    margin-left:2rem;
-    margin-right: 2rem;;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .section_card {
@@ -113,9 +149,10 @@ header {
     color: grey;
     font-weight: bold;
     margin-bottom: 4rem;
+    outline: none;
 }
 
-.section_card_button:hover {
+button:hover {
     cursor: pointer;
     border: 2px solid goldenrod;
 }
