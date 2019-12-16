@@ -26,11 +26,13 @@ main {
 }
 
 .section_card_wrap {
-    margin: 10%;
+    margin-top: 6rem;
+    margin-left:2rem;
+    margin-right: 2rem;;
 }
 
 .section_card {
-    margin-top: 10%;
+    margin-top: 6rem;
 }
 
 .section_card_image {
@@ -74,7 +76,7 @@ main {
     background-color: white;
     color: grey;
     font-weight: bold;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 .section_card_button:hover {
