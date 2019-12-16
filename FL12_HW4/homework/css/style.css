@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: radial-gradient(circle, rgba(17,31,31,1) 0%, rgba(0,0,0,0.577468487394958) 50%), url('../img/home-bg.jpg');
+    background: linear-gradient(180deg, rgba(17,31,31,1) 0%, rgba(17,24,31,0.6755077030812324) 50%), url('../img/home-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top 1rem center;
