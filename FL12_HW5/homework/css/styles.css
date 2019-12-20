@@ -10,9 +10,6 @@
   --bg-footer-color: #024161;
 }
 
-body {
-  font-family: roboto;
-}
 .post-1 {
 	background: #9d27b0;
 }
@@ -42,6 +39,7 @@ body {
   width: 100%;
   font-size: 1rem;
   background-color: #0b192f;
+  font-family: 'Roboto', sans-serif;
 }
 .container{
   position: relative;
@@ -50,7 +48,7 @@ body {
   margin: 0 auto;
 }
 .menu-wrap {
-  background-color: var(--bg-color--header);
+  background-color: #024161;
   padding:2rem;
   display: flex;
   justify-content: space-between;
@@ -87,20 +85,100 @@ body {
 .logo-link:hover {
   color: #bfba55;
 }
-.header-post{
+.header_post{
   position: relative;
 }
-.header-image{
+.header_image{
   width:100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.header-info{
+.header_info{
   display: flex;
   flex-direction: column;
   position: absolute;
-  line-height: 2;
   top:70%;
   left:10%;
+}
+.header_info .header_text{
+  margin-top: 1%;
+}
+.main_blog{
+  margin-top: 1%;
+}
+.item_blog{
+  display:flex;
+  flex-direction: row;
+  width:70%;
+  position: relative;
+  color:white;
+}
+.item_blog img{
+  width:50%;
+}
+.item_blog_info{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  padding-top:2%;
+  padding-bottom: 2%;
+}
+
+.item_blog_info:nth-child(even){
+  padding-left: 3%;
+  padding-right: 5%;
+  text-align: left;
+}
+.item_blog_info:nth-child(odd){
+  padding-right: 3%;
+  padding-left: 5%;
+  text-align: right;
+}
+.item_blog_info h2{
+  font-size: 3rem;
+  font-weight: 100;
+}
+.item_blog_info p{
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-top:5%;
+}
+.date_blog{
+  font-size: 4rem;
+  opacity: 0.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.date_blog span{
+  font-size: 2rem;
+}
+.date_blog:nth-child(even){
+  position: absolute;
+  top:1rem;
+  left:1rem;
+}
+.date_blog:nth-child(odd){
+  position: absolute;
+  top:1rem;
+  right:1rem;
+}
+.item_blog:hover img, .item_blog_info:hover h2{
+  opacity:0.5;
+  cursor: pointer;
+}
+.footer{
+  width:100%;
+  background-color: #024161;
+  color:white;
+  opacity: 0.3;
+  padding-top:2rem;
+  padding-bottom:1rem;
+  padding-left: 2rem;
+  padding-right:2rem;
+  line-height: 1.5;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
