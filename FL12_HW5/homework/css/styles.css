@@ -69,6 +69,7 @@ body {
 .menu>ul>li>a {
   text-decoration: none;
   color: white;
+  font-weight: 300;
   padding-top: 2.6rem;
   padding-bottom: 2.6rem;
   padding-right: 1rem;
@@ -91,7 +92,7 @@ body {
   color: #9d27b0;
 }
 
-.logo-link:hover {
+.logo-link:hover, .logo-link span:hover{
   color: #1f52a4;
 }
 
@@ -110,14 +111,20 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 10%;
+  color:white;
 }
 
 .header_info .header_text {
-  margin-top: 1%;
+  margin-top: 3%;
+  line-height: 1.8;
+  font-weight: 300;
 }
-
+h1{
+  font-size: 4rem;
+  font-weight: 100;
+}
 .main_blog {
   margin-top: 1%;
   display: flex;
@@ -128,6 +135,7 @@ body {
   flex-direction: row;
   position: relative;
   color: white;
+  font-weight: 300;
   height: 25rem;
 }
 
@@ -212,6 +220,7 @@ body {
 .item_news {
   background-color: white;
   margin-bottom: 1rem;
+  font-weight: 300;
 }
 
 .item_news_info {
