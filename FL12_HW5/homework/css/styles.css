@@ -11,19 +11,23 @@
 }
 
 .post-1 {
-	background: #9d27b0;
+  background: #9d27b0;
 }
+
 .post-2 {
-	background: #9bb800;
+  background: #9bb800;
 }
+
 .post-3 {
-	background: #ed5120;
+  background: #ed5120;
 }
+
 .post-4 {
-	background: #9d27b0;
+  background: #9d27b0;
 }
+
 .post-5 {
-	background: #2d95bb;
+  background: #2d95bb;
 }
 
 /* Your styles go here */
@@ -41,171 +45,201 @@ body {
   background-color: #0b192f;
   font-family: 'Roboto', sans-serif;
 }
-.container{
+
+.container {
   position: relative;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
 }
+
 .menu-wrap {
   background-color: #024161;
-  padding:2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  padding: 2rem;
 }
 
 .menu>ul>li {
   display: inline-block;
-  margin-right: 2rem;
-}
-
-.menu>ul>li:last-child {
-  margin-right: 0;
 }
 
 .menu>ul>li>a {
   text-decoration: none;
-  color: #777;
+  color: white;
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .menu>ul>li>a:hover {
-  color: #bfba55;
+  background-color: #1f52a4;
   cursor: pointer;
 }
 
 .logo-link {
   text-decoration: none;
-  color: #777;
-  text-transform: uppercase;
-  font-weight: bold;
+  color: white;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.logo-link span {
+  color: #9d27b0;
 }
 
 .logo-link:hover {
-  color: #bfba55;
+  color: #1f52a4;
 }
-.header_post{
+
+.header_post {
   position: relative;
 }
-.header_image{
-  width:100%;
+
+.header_image {
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.header_info{
+
+.header_info {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top:70%;
-  left:10%;
+  top: 70%;
+  left: 10%;
 }
-.header_info .header_text{
+
+.header_info .header_text {
   margin-top: 1%;
 }
-.main_blog{
+
+.main_blog {
   margin-top: 1%;
   display: flex;
 }
-.item_blog{
-  display:flex;
+
+.item_blog {
+  display: flex;
   flex-direction: row;
   position: relative;
-  color:white;
-  height:25rem;
+  color: white;
+  height: 25rem;
 }
-.item_blog:last-child{
-  height:15rem;
+
+.item_blog:last-child {
+  height: 15rem;
 }
-.item_blog img{
-  width:50%;
+
+.item_blog img {
+  width: 50%;
 }
-.item_blog_info{
+
+.item_blog_info {
   display: flex;
   flex-direction: column;
-  justify-content:center;
-  padding-top:2%;
+  justify-content: center;
+  padding-top: 2%;
   padding-bottom: 2%;
 }
 
-.item_blog_info:nth-child(even){
+.item_blog_info:nth-child(even) {
   padding-left: 3%;
   padding-right: 6%;
   text-align: left;
 }
-.item_blog_info:nth-child(odd){
+
+.item_blog_info:nth-child(odd) {
   padding-right: 3%;
   padding-left: 6%;
   text-align: right;
 }
-.item_blog_info h2{
+
+.item_blog_info h2 {
   font-size: 4rem;
   font-weight: 100;
 }
-.item_blog_info p{
+
+.item_blog_info p {
   font-size: 1rem;
   line-height: 1.8;
-  padding-top:5%;
+  padding-top: 5%;
 }
-.date_blog{
+
+.date_blog {
   font-size: 4rem;
   opacity: 0.2;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.date_blog span{
+
+.date_blog span {
   font-size: 2rem;
 }
-.date_blog:nth-child(even){
+
+.date_blog:nth-child(even) {
   position: absolute;
-  top:1rem;
-  left:1rem;
+  top: 1rem;
+  left: 1rem;
 }
-.date_blog:nth-child(odd){
+
+.date_blog:nth-child(odd) {
   position: absolute;
-  top:1rem;
-  right:1rem;
+  top: 1rem;
+  right: 1rem;
 }
-.item_blog:hover img, .item_blog_info:hover h2{
-  opacity:0.5;
+
+.item_blog:hover img,
+.item_blog_info:hover h2 {
+  opacity: 0.5;
   cursor: pointer;
 }
-.news_blog{
-  width:50%;
-  padding-left:1rem;
+
+.news_blog {
+  width: 50%;
+  padding-left: 1rem;
 }
-.news_blog img{
-  width:100%;
+
+.news_blog img {
+  width: 100%;
 }
-.item_news{
+
+.item_news {
   background-color: white;
   margin-bottom: 1rem;
 }
-.item_news_info{
-  padding-left:1rem;
-  padding-right:1rem;
+
+.item_news_info {
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-bottom: 2rem;
   padding-top: 2rem;
 }
-.item_news_info h3{
-  font-size:2rem;
+
+.item_news_info h3 {
+  font-size: 2rem;
   font-weight: 300;
 }
-.item_news_info p{
-  padding-top:1rem;
+
+.item_news_info p {
+  padding-top: 1rem;
   line-height: 1.8;
 }
-.footer{
+
+.footer {
   margin-top: 1%;
-  width:100%;
+  width: 100%;
   background-color: #024161;
-  color:white;
+  color: white;
   opacity: 0.3;
-  padding:2rem;
+  padding: 2rem;
   line-height: 1.5;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
