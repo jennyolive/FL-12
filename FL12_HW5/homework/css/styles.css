@@ -30,3 +30,77 @@ body {
 }
 
 /* Your styles go here */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #0b192f;
+}
+.container{
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.menu-wrap {
+  background-color: var(--bg-color--header);
+  padding:2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.menu>ul>li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.menu>ul>li:last-child {
+  margin-right: 0;
+}
+
+.menu>ul>li>a {
+  text-decoration: none;
+  color: #777;
+}
+
+.menu>ul>li>a:hover {
+  color: #bfba55;
+  cursor: pointer;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.logo-link:hover {
+  color: #bfba55;
+}
+.header-post{
+  position: relative;
+}
+.header-image{
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-info{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  line-height: 2;
+  top:70%;
+  left:10%;
+}
