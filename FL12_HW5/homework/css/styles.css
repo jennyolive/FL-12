@@ -480,8 +480,8 @@ h1 {
   }
 
   .item_blog_info:nth-child(odd) {
-    position: relative;
-    top: -15%;
+    position: absolute;
+    top: 18rem;
   }
 
   .item_blog_info:nth-child(even) {
