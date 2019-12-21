@@ -111,6 +111,7 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
+  width:60%;
   top: 60%;
   left: 10%;
   color:white;
@@ -356,7 +357,7 @@ height: 25rem;
  left:0;
 }
 .header_post{
-  height:32rem;
+  height:30rem;
   margin-bottom: 3%;
 }
 .header_image{
@@ -364,9 +365,13 @@ height: 25rem;
   object-fit: cover;
 }
 .header_info{
-  top:20%;
+  top:35%;
   left:6%;
   right:6%;
+  width:80%;
+}
+h1{
+  font-size: 3rem;
 }
 .footer{
   display:flex;
