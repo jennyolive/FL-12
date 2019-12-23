@@ -9,7 +9,7 @@ let discr = b * b - four* a * c;
 
 let x,x1,x2;
 
-if (a === 0 && b === 0 && c === 0) {
+if (parseInt(a) === 0 && parseInt(b) === 0 && parseInt(c) === 0) {
     console.log('invalid input data');
 } else if (isNaN(a) || isNaN(b) || isNaN(c)) {
     console.log('invalid input data');
