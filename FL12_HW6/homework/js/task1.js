@@ -1,27 +1,26 @@
-var a = prompt('enter first value');
-var b = prompt('enter second value');
-var c = prompt('enter third value');
+let a = prompt('enter first value');
+let b = prompt('enter second value');
+let c = prompt('enter third value');
 
+let four = 4;
+let two = 2;
 
-var discr = b * b - 4* a * c;
+let discr = b * b - four* a * c;
 
+let x,x1,x2;
 
 if (a === 0 && b === 0 && c === 0) {
     console.log('invalid input data');
-} 
-else if (isNaN(a) || isNaN(b) || isNaN(c)) {
+} else if (isNaN(a) || isNaN(b) || isNaN(c)) {
     console.log('invalid input data');
-} 
-else if (discr < 0) {
+} else if (discr < 0) {
     console.log('no solution');
-} 
-else if (discr === 0) {
-    x = Math.round(-b / (2*a));
+} else if (discr === 0) {
+    x = Math.round(-b / (two*a));
     console.log('x = ' + x);
-} 
-else if (discr > 0) {
-    x1 = Math.round((-b + Math.sqrt(discr)) / (2*a));
-    x2 = Math.round((-b - Math.sqrt(discr)) / (2*a));
+} else if (discr > 0) {
+    x1 = Math.round((-b + Math.sqrt(discr)) / (two*a));
+    x2 = Math.round((-b - Math.sqrt(discr)) / (two*a));
     console.log('x1 = ' + x1);
     console.log('x2 = ' + x2);
 }
