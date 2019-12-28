@@ -12,11 +12,12 @@ if(email === '' || email === null) {
 } else if (email === emailUser || email === emailAdmin) {
     let password = prompt('Enter your password', '');
     if (password === '' || password === null){
-        alert ('Canceled');
-    }
-    else if (password === passwordUser || password === passwordAdmin)
-    alert ('Success');
-    else 
-    alert('Wrong password');
-} else if 
-   (alert('I don’t know you')) ;
+ alert('Canceled');
+} else if (password === passwordUser || password === passwordAdmin) {
+alert('Success');
+} else {
+ alert('Wrong password'); 
+}
+} else {
+    alert('I don’t know you');
+}
