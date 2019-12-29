@@ -8,7 +8,7 @@ while (gameStart) {
     let minAttempt = 1;
     let maxPrize = 100;
     let totalPrize = 0;
-    let prizeCoef = {
+    let Coef = {
         1: 1,
         2: 2,
         3: 4
@@ -23,9 +23,9 @@ while (gameStart) {
         let inputNumber = prompt(`Choose a roulette pocket number from 0 to ${maxNumber}
         Attempts left: ${maxAttempt+minAttempt-attempt}
         Total prize: ${totalPrize}$
-        Possible prize on current attempt: ${maxPrize/prizeCoef[attempt]}$`, '');
+        Possible prize on current attempt: ${maxPrize/Coef[attempt]}$`, '');
         if (inputNumber === randomNumber) {
-            totalPrize = totalPrize + maxPrize / prizeCoef[attempt];
+            totalPrize = totalPrize + maxPrize / Coef[attempt];
             nextGame = confirm(`Congratulation, you won! Your prize is: ${totalPrize}$. Do you want to continue?`);
             if (nextGame) {
                 attempt = minAttempt;
