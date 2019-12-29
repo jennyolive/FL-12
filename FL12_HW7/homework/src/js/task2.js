@@ -31,11 +31,9 @@ while (gameStart) {
                 attempt = minAttempt;
                 maxPrize *= two;
                 maxNumber += four;
-            } else if (!nextGame) {
-                alert('');
             }
         } else {
             attempt++;
         }
-    }       
+    }
 }
